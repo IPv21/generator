@@ -1,8 +1,8 @@
 
-const LOWER_CASE = "abcdefghijklmnopqrstuvwxyz "
-const UPPER_CASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-const SYMBOLS = "!@#$%^&*()?"
-const NUMBERS = "0123456789"
+const LOWER_CASE =  ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+const UPPER_CASE = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+const SYMBOLS = ["!", "@", "#", "$", '%', "^", "&", "*", "(", ")"];                                     ;
+const NUMBERS = ['1', '2', '3', '4', '5', '6',  '7', '8', '9', '0'];
 
 
 function generatePassword() {
@@ -15,7 +15,10 @@ function generatePassword() {
   var lower_case = confirm("Would you like lower case letters?")
   var upper_case = confirm("Would you like upper case letters?")
 
-  var characters = NUMBERS
+
+  
+
+  var characters = [SYMBOLS, LOWER_CASE, UPPER_CASE, NUMBERS]
   var password = ""
  for ( var counter = 0; counter < nmbrs ; counter ++  ){
     var randomIndex = Math.floor(Math.random() * characters.length);
@@ -28,7 +31,7 @@ function generatePassword() {
     
 }
 
-
+                   
  
 
 
