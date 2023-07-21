@@ -18,18 +18,24 @@ function generatePassword() {
 
   
 
-  var characters = [SYMBOLS, LOWER_CASE, UPPER_CASE, NUMBERS]
-  var password = ""
- for ( var counter = 0; counter < nmbrs ; counter ++  ){
-    var randomIndex = Math.floor(Math.random() * characters.length);
-    var randomCharacter = characters[randomIndex];
-    console.log(randomCharacter) 
-    password = password + randomCharacter
- }
 
-    return password
-    
+
+
+
+
+if (hasLOWER_CASE) {
+  possibleCharacters = possibleCharacters.concat(LOWER_CASE);
 }
+if (hasUPPER_CASE) {
+  possibleCharacters = possibleCharacters.concat(UPPER_CASE);
+}
+if (hasNUMBERS) {
+  possibleCharacters = possibleCharacters.concat(NUMBERS);
+}
+if (hasSYMBOLS) {
+  possibleCharacters = possibleCharacters.concat(SYMBOLS);
+}
+
 
                    
  
@@ -46,6 +52,17 @@ function generatePassword() {
 
 
 var generateBtn = document.querySelector("#generate");
+
+for ( var counter = 0; counter < nmbrs ; counter ++  ){
+  var randomIndex = Math.floor(Math.random() * characters.length);
+  var randomCharacter = characters[randomIndex];
+  console.log(randomCharacter) 
+  password = password + randomCharacter
+}
+
+  return password
+  
+};
 
 // Write password to the #password input
 function writePassword() {
